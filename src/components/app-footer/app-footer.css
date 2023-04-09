@@ -1,0 +1,37 @@
+.app-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 21px;
+    padding-right: 19px;
+    height: 55px;
+    font-size: 18px;
+    min-height: 55px;
+    background-color: #0067A3;
+}
+
+.app-footer__section {
+    display: flex;
+    gap: 36px;
+}
+
+.app-footer__item {
+    /*font-size: 18px;*/
+    line-height: 21px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .app-footer {
+        min-height: 65px;
+        height: 65px;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .app-footer__section:first-child {
+        flex-direction: column;
+        gap: 10px;
+        min-width: 150px;
+    }
+}

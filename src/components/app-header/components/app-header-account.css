@@ -1,0 +1,17 @@
+.app-header-account__avatar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6.8px;
+    cursor: pointer;
+}
+
+.app-header-account__arrow {
+    transition: .6s;
+}
+
+.app-header-account--open .app-header-account__arrow {
+    transform: rotate(180deg);
+
+    transition: .5s;
+}

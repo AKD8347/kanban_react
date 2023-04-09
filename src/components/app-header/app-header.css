@@ -1,0 +1,39 @@
+.app-header {
+    height: 55px;
+    min-height: 55px;
+}
+
+.app-header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: inherit;
+    width: 100%;
+    padding-left: 14px;
+    padding-right: 16px;
+    box-sizing: border-box;
+    background-color: #0067A3;
+    z-index: 1;
+}
+
+.app-header__title {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 33px;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .app-header__content {
+        background-color: #0079BF;
+    }
+
+    .app-header__title {
+        display: none;
+    }
+
+    .app-header-account {
+        margin-left: auto;
+    }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import router from "./router";
+import api from "./api";
+
+import {
+    RouterProvider,
+} from "react-router-dom";
+
+import './App.css'
+
+import AppHeader from "./components/app-header/AppHeader";
+import AppFooter from "./components/app-footer/AppFooter";
+
+import {useEffect} from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    useEffect(() => {
+        api.checkColumns()
+    }, [])
+
+    return (
+        <div className="main-wrapper">
+            <AppHeader/>
+            <div className="main-wrapper__content">
+                <RouterProvider router={router}></RouterProvider>
+            </div>
+            <AppFooter/>
+        </div>
+    )
 }
 
 export default App;
